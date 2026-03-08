@@ -5,3 +5,5 @@ namespace: flux-system
 
 resources:
   - github-status.yaml
+  - github-status-alert.yaml
+

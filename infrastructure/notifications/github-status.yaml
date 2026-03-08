@@ -8,17 +8,3 @@ spec:
   secretRef:
     name: github-token
 
----
-
-apiVersion: notification.toolkit.fluxcd.io/v1beta3
-kind: Alert
-metadata:
-  name: github-status-alert
-spec:
-  providerRef:
-    name: github-status
-  eventSeverity: info
-  eventSources:
-    - kind: Kustomization
-      name: "flux-system"
-      namespace: flux-system
