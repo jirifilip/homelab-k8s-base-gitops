@@ -27,4 +27,5 @@ jobs:
 
       - name: Validate
         run: |
-          kustomize build . | kubeconform -strict -summary
+          kustomize build . > rendered.yaml
+          kubeconform -strict -summary rendered.yaml
