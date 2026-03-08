@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   - flux-system
-  - infrastructure/prometheus
   - infrastructure/notifications
+  - infrastructure/prometheus
