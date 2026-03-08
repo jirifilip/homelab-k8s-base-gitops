@@ -27,4 +27,4 @@ jobs:
 
       - name: Validate
         run: |
-          kustomize build . | kubeconforn -strict -summary
+          kustomize build . | kubeconform -strict -summary
