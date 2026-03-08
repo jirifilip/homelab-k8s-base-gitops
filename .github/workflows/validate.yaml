@@ -1,0 +1,30 @@
+name: Validate Kustomization
+
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Kustomize
+        uses: fluxcd/pkg/actions/kustomize@main
+
+      - name: Setup Kubeconform
+        uses: fluxcd/pkg/actions/kubeconform@main
+
+      - name: Validate
+        run: |
+          kustomize build . | kubeconforn -strict -summary
