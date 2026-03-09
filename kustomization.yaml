@@ -5,4 +5,4 @@ resources:
   - flux-system
   - infrastructure/notifications
   - infrastructure/prometheus
-  - infrastructure/weave-gitops
+  - infrastructure/weave-gitops/weave-gitops-dashboard.yaml
