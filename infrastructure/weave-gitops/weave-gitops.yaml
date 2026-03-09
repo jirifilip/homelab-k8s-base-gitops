@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: ww-gitops
@@ -7,7 +7,7 @@ spec:
   interval: 1h
   url: https://charts.weave.works/charts
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: weave-gitops
