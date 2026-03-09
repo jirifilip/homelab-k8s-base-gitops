@@ -5,3 +5,5 @@ namespace: prometheus
 
 resources:
   - namespace.yaml
+  - prometheus.yaml
+  - otel-collector.yaml
