@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
   - flux-system
   - infrastructure/notifications
-  - infrastructure/weave-gitops
   - infrastructure/prometheus
