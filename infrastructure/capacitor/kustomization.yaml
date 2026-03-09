@@ -6,4 +6,5 @@ namespace: flux-system
 
 resources:
   - repository.yaml
+  - rbac.yaml
   - capacitor.yaml
